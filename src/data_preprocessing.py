@@ -12,7 +12,7 @@ class PreprocessedDataLoader(torch.utils.data.DataLoader):
         if transform is None:
             transform = transforms.Compose([
                 transforms.Resize(model_input_shape), # Resizing image
-                transform.ToTensor()
+                transforms.ToTensor()
             ])
 
         dataset = datasets.ImageFolder(img_dir, transform=transform)
